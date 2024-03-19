@@ -1,0 +1,35 @@
+str1 = input('enter the string\n')
+d=0
+u=0
+l=0
+str_wrd = str1.split()
+strlen = len(str_wrd)
+print("strng length: ",strlen)
+for c in str1:
+    if c.isdigit():
+        d=d+1
+    elif c.isupper():
+        u=u+1
+    elif c.islower():
+        l=l+1
+print("upper is:\t",u,"lower is:\t",l,"digit is:\t",d)
+
+'''  3b
+str1 = input('enter the string\n')
+str2 = input('enter the string\n')
+if len(str1)<len(str2):
+    shrt = len(str1)
+    lng = len(str2)
+elif len(str1)>len(str2):
+    shrt = len(str2)
+    lng = len(str1)
+else:
+    shrt = len(str2)
+    lng = len(str1)
+match=0
+for i in range(shrt):
+    if(str1[i]==str2[i]):
+        match = match+1
+print("similarity btw two string is\n",(match/lng))
+
+    '''

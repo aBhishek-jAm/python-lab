@@ -1,0 +1,68 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+data=np.random.randn(1000)
+data1=data+2
+
+#histogram
+plt.figure(figsize=(8,5))
+plt.subplot(2,3,1)
+plt.hist(data,color='magenta',bins=30,edgecolor='black')
+
+#withdensity
+plt.figure(figsize=(8,5))
+plt.subplot(2,3,2)
+plt.hist(data,color='white',edgecolor='black',density=True)
+
+#commulative 
+plt.figure(figsize=(8,5))
+plt.subplot(2,3,3)
+plt.hist(data,cumulative='True',color='darkorange',bins=30,edgecolor='black',density=True)
+
+#stacked
+plt.figure(figsize=(8,5))
+plt.subplot(2,3,4)
+plt.hist([data,data1],width=0.2,edgecolor="black",bins=50,color=["yellow","red"],alpha=0.7)
+
+#log
+plt.figure(figsize=(8,5))
+plt.subplot(2,3,5)
+plt.hist(data,edgecolor="black",log=True,bins=30,color="cyan")
+
+
+plt.tight_layout()
+plt.show()
+
+''' 5b
+import matplotlib.pyplot as plt
+import numpy as np
+data = ["a","b","C","d"]
+data1 = [10,20,30,40]
+
+#basic pie
+plt.subplot(2,3,1)
+plt.pie(data1,labels=data,autopct="%1.1f%%",startangle=90)
+
+#explode pie
+plt.subplot(2,3,2)
+explode = [0.1,0.2,0,0]
+plt.pie(data1,labels=data,autopct="%1.1f%%",startangle=90,explode=explode)
+
+#donut pie
+plt.subplot(2,3,3)
+plt.pie(data1,labels=data,autopct="%1.1f%%",startangle=90,wedgeprops=dict(width=0.5))
+
+#costumized angle
+plt.subplot(2,3,4)
+plt.pie(data1,labels=data,autopct="%1.1f%%",startangle=45)
+
+#nested pie
+a =[10,20]
+b = [1,2,3,4]
+plt.subplot(2,3,5)
+plt.pie(a,labels=["grp1","grp2"],startangle=45,wedgeprops = dict(width=0.3))
+plt.pie(b,autopct="%1.1f%%",startangle=45,wedgeprops = dict(width=0.1))
+
+plt.tight_layout()
+plt.show()
+'''

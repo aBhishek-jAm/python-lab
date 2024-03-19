@@ -1,0 +1,82 @@
+import matplotlib.pyplot as plt
+import numpy as np
+cat = ['a','b','c','d','e']
+data = [110,250,103,564,551]
+data1 = [100,300,150,640,890]
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,1)
+plt.bar(cat,data,color='cyan')
+plt.title("normal")
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,2)
+plt.bar(cat,data,color="salmon")
+plt.bar(cat,data1,bottom=data)
+plt.title("stacked")
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,3)
+a = np.arange(len(data))
+b=0.5
+data2=[300,400,250,500,990]
+plt.bar(a,data1,width=b, color="olive")
+plt.bar(a+b,data2,width=b, color="yellow")
+plt.title("multiple")
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,4)
+plt.barh(cat,data,color="purple")
+plt.title("horizontal")
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,5)
+plt.bar(cat,data1,yerr=[10,20,30,40,50],color="red")
+plt.title("error")
+
+plt.tight_layout()
+plt.show()
+
+''' 4b
+import matplotlib.pyplot as plt
+import numpy as np
+
+data = np.random.rand(100)
+data1 = np.random.rand(100)
+colors = np.random.rand(100)
+sizes = 100*np.random.rand(100)
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,1)
+for i in range(11):
+        plt.scatter(data[i],data1[i],color="red",marker=i)
+plt.title("different markers")
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,2)
+plt.scatter(data,data1,marker='s',color="olive")
+plt.title("bubble")
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,3)
+plt.scatter(data,data1,c=colors)
+plt.colorbar()
+plt.title("colours")
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,4,projection='3d')
+plt.scatter(data,data1,sizes)
+plt.title("3d")
+
+plt.figure(figsize=(15,10))
+plt.subplot(2,3,5)
+plt.hexbin(data,data1,gridsize=15,cmap="Blues")
+plt.title("hexbin")
+
+plt.tight_layout()
+plt.show()
+
+
+
+
+'''

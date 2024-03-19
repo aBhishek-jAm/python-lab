@@ -1,0 +1,27 @@
+def fn(n):
+    if(n<=0):
+        return "n should be greater than 0"
+    elif(n==1):
+        return 0
+    elif(n==2):
+        return 1
+    else:
+        return fn(n-1)+fn(n-2)
+no = int(input("\nenter the no.\n"))
+res = fn(no)
+print(res)
+
+''' 2b
+no = (input("\nenter binary no.\n"))
+no1 = (input("\nenter octal no.\n"))
+def btod(no):
+    return int(no,2)
+def otoh(no1):
+    dec = int(no1,8)
+    return hex(dec)
+
+res = btod(no)
+print(res)
+res1 = otoh(no1)
+print(res1)
+'''

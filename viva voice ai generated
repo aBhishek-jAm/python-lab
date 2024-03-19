@@ -1,0 +1,41 @@
+Sure, here are some potential viva questions for each library:
+
+### Matplotlib:
+1. What is Matplotlib, and what are its main features?
+2. Explain the difference between `plt.plot()` and `plt.scatter()` functions in Matplotlib.
+3. How can you add labels to axes and a title to a plot using Matplotlib?
+4. Discuss the difference between `plt.figure()` and `plt.subplots()` in Matplotlib.
+5. Explain the concept of figure size and DPI (dots per inch) in Matplotlib.
+6. How can you save a Matplotlib plot as an image file?
+7. What are the different types of plots that can be created using Matplotlib?
+8. How do you create multiple subplots in a single figure using Matplotlib?
+
+### Bokeh:
+1. What is Bokeh, and what are its advantages over other plotting libraries?
+2. Explain the difference between Bokeh's `figure()` and `gridplot()` functions.
+3. How can you add different glyphs like circles, lines, or patches to a Bokeh plot?
+4. Discuss the role of Bokeh layouts in creating complex visualizations.
+5. What is the purpose of Bokeh widgets, and how can they be integrated into plots?
+6. Explain the difference between server-based and standalone usage of Bokeh.
+7. How can you customize the appearance of plots in Bokeh, such as colors, markers, and fonts?
+8. What are Bokeh callbacks, and how do they enhance interactivity in visualizations?
+
+### NumPy:
+1. What is NumPy, and why is it used in Python scientific computing?
+2. Explain the concept of arrays in NumPy and how they differ from Python lists.
+3. How do you create a NumPy array from a Python list?
+4. Discuss the advantages of using vectorized operations in NumPy.
+5. Explain broadcasting in NumPy with an example.
+6. How can you perform basic statistical operations like mean, median, and standard deviation using NumPy?
+7. What are universal functions (ufuncs) in NumPy, and why are they important?
+8. How do you perform array manipulation operations such as reshaping, slicing, and concatenation in NumPy?
+
+### Plotly:
+1. What is Plotly, and how does it differ from other Python plotting libraries?
+2. Explain the structure of a Plotly figure object.
+3. How can you create interactive plots using Plotly?
+4. Discuss the advantages of Plotly Express for creating quick visualizations.
+5. What is Plotly Dash, and how does it enable building interactive web applications?
+6. How can you customize the appearance of Plotly plots using layout options?
+7. Explain the concept of Plotly callbacks and how they enable interactivity.
+8. How can you export Plotly plots to various formats such as HTML, PNG, or PDF?

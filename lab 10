@@ -1,0 +1,75 @@
+''' 10b usa
+
+import plotly.express as px
+import pandas as pd
+
+volcano_data = {
+    "name": ["san franciso"],
+    "latitude": [37.77],
+    "longitude": [-122.431]
+}
+
+data_volcano = pd.DataFrame(volcano_data)
+fig = px.scatter_geo(data_volcano, lat="latitude", lon="longitude", scope="usa",color=[10])
+fig.show()
+'''
+
+''' volcano code
+import plotly.express as px
+import pandas as pd
+# Sample volcano data (replace this with your own data)
+volcano_data = {
+'Volcano Name': ['Mount Vesuvius', 'Mauna Loa', 'Mount St. Helens',
+'Krakatoa', 'Mount Fuji'],
+'Latitude': [40.8, 19.4, 46.8, -6.1, 35.3],
+'Longitude': [14.4, -155.2, -121.7, 105.4, 138.7],
+'Elevation (m)': [1281, 4170, 2549, 813, 3776]
+}
+df_volcanoes = pd.DataFrame(volcano_data)
+# Create a map using Plotly Express
+fig = px.scatter_geo(df_volcanoes, lat='Latitude', lon='Longitude',text='Volcano Name', size='Elevation (m)',title='Volcano Locations')
+# Show the map
+fig.show()
+
+'''
+''' world map
+import plotly
+import plotly.express as px
+fig = px.choropleth(locations=["USA","Canada","UK","Germany","India","Russia"],locationmode="country names",color=[1,2,3,4,5,6],scope="world")
+fig.show()
+'''
+
+''' 10a time stamps
+import plotly.express as px
+data = px.data.stocks()
+fig = px.line(data, x='date', y="FB")
+fig.show()
+'''
+''' normal
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+data = np.random.randint(100,size=(30))
+data1 = np.random.randint(100,size=(30))
+data=data.sort()
+data2 = pd.DataFrame({'data':data,'data1':data1})
+data2.plot('data','data1',linestyle="dotted")
+'''
+''' independence 
+import plotly.express as px
+import pandas as pd
+# Sample data creation (replace this with your own time series data
+
+data = {
+'Year': [1857, 1900, 1915, 1920, 1930, 1942, 1947],
+'Event': ['First War of Independence', 'Partition of Bengal', 'GhadarMovement', 'Non-Cooperation Movement', 'Civil Disobedience Movement','Quit India Movement', 'Independence'],
+'Description': ['The first large-scale rebellion against British rule.','Bengal was divided, leading to protests.', 'Revolutionary movement against British imperialism.', 'Led by Gandhi, urging non-violentresistance.', 'Protests against salt tax and British monopoly.', 'Demandfor British withdrawal from India.', 'India gained independence on August15, 1947.']
+}
+df = pd.DataFrame(data)
+# Create a time series plot using Plotly Express
+fig = px.line(df, x='Year', y=df.index, text='Event', title='Freedom Fight of India',hover_data=['Description'])
+# Show the plot
+fig.update_traces(mode='markers+lines+text')
+fig.show()
+'''
+

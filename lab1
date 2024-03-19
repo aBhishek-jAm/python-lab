@@ -1,0 +1,26 @@
+def avg(a,b):
+    return (a+b)/2
+marks1 = int(input("enter the marks of frst test\n"))
+marks2 = int(input("enter the marks of secnd test\n"))
+marks3 = int(input("enter the marks of thrd test\n"))
+avg1 = avg(marks1,marks2)
+avg2 = avg(marks2,marks3)
+avg3 = avg(marks1,marks3)
+if avg1>avg2:
+    print("\nfrst test is high\n")
+elif avg2>avg3:
+    print("\nscnd test is high\n")
+else:
+    print("\nthird test is high\n")
+
+''' 1b
+no = int(input("\nenter the no.\n"))
+str_val = str(no)
+if str_val == str_val[::-1]:
+    print("\npalindrome\n")
+else:
+    print("\nnot plindrome\n")
+for i in range(10):
+        if str_val.count(str(i))>0:
+            print(i,":",str_val.count(str(i)))
+'''

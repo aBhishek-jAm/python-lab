@@ -6,9 +6,9 @@ sns.scatterplot(x='sepal_length', y='sepal_width', data=data, hue='species', sty
 plt.show()
 
 ''' 7b
-import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import matplotlib.pyplot as plt
 
 data =[3,4,5,6]
 data1=[4,5,7,2]
@@ -20,7 +20,7 @@ sns.scatterplot(data)
 
 plt.figure(figsize=(15,10))
 plt.subplot(2,3,2)
-df=sns.load_dataset('titanic')
+df=sns.load_dataset('iris')
 sns.barplot(df)
 
 
